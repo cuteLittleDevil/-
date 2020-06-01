@@ -18,7 +18,7 @@ func (s *student) Task(taskResources interface{}, num, taskSum int, leader ILead
 		}
 		startNum := num * groupNum
 		endNum := startNum + groupNum
-		if endNum + groupNum > len(resource) {
+		if endNum + groupNum >= len(resource) {
 			endNum = len(resource)
 		}
 		for i := startNum; i < endNum; i++ {
